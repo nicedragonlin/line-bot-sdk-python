@@ -21,6 +21,7 @@ from docx.api import Document
 import pandas as pd
 from argparse import ArgumentParser
 import requests
+import gdown
 
 from flask import Flask, request, abort
 from linebot import (
@@ -123,7 +124,12 @@ def miranda_list_ingredient():
     print('[Debug M001]')
 
     print('[Debug M002-1]')
-    download_file_from_google_drive('15fLN8GigE071EFcm095LJH3WJXSjE7UE','menu_download.docx')
+
+    url = 'https://docs.google.com/document/d/15fLN8GigE071EFcm095LJH3WJXSjE7UE/edit?usp=sharing&ouid=105440516119125989146&rtpof=true&sd=true'
+    file_id = url.split('/')[-2]
+    prefix = 'https://drive.google.com/uc?/export=download&confirm=1&id='
+    gdown.download(prefix+file_id,'D:\menu_download.docx')
+    
     #document = Document('menu.docx')
     print('[Debug M002-2]')
     document = Document('menu_download.docx')
@@ -202,16 +208,4 @@ def miranda_list_ingredient():
     print('[Debug]'+result)
     return result
 
-def download_file_from_google_drive(file_id, destination):
-    URL = "https://docs.google.com/uc?export=download&confirm=1"
 
-    session = requests.Session()
-
-    response = session.get(URL, params={"id": file_id}, stream=True)
-    token = get_confirm_token(response)
-
-    if token:
-        params = {"id": file_id, "confirm": token}
-        response = session.get(URL, params=params, stream=True)
-
-    save_response_content(response, destination)
