@@ -73,12 +73,12 @@ def callback():
     for event in events:
         
         print('[Debug 100]')
-        if not isinstance(event, MessageEvent):
-            print('[Debug 101]')
-            continue
-        if not isinstance(event.message, TextMessageContent):
-            print('[Debug 102]')
-            continue
+        #if not isinstance(event, MessageEvent):
+        #    print('[Debug 101]')
+        #    continue
+        #if not isinstance(event.message, TextMessageContent):
+        #    print('[Debug 102]')
+        #    continue
         with ApiClient(configuration) as api_client:
             print('[Debug 103]')
             line_bot_api = MessagingApi(api_client)
