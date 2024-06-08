@@ -20,6 +20,7 @@ import math
 from docx.api import Document
 import pandas as pd
 from argparse import ArgumentParser
+import requests
 
 from flask import Flask, request, abort
 from linebot import (
