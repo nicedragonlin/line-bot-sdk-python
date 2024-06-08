@@ -2,5 +2,4 @@ line-bot-sdk
 flask
 docx
 pandas
-yaml
 math
