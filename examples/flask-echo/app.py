@@ -72,18 +72,15 @@ def callback():
     # if event is MessageEvent and message is TextMessage, then echo text
     for event in events:
         
-        
-        MessagingApi(ApiClient(configuration))
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text='[debug]'+event.message.text))
-
-    
+        print('[Debug 100]')
         if not isinstance(event, MessageEvent):
+            print('[Debug 101]')
             continue
         if not isinstance(event.message, TextMessageContent):
+            print('[Debug 102]')
             continue
         with ApiClient(configuration) as api_client:
+            print('[Debug 103]')
             line_bot_api = MessagingApi(api_client)
             line_bot_api.reply_message_with_http_info(
                 ReplyMessageRequest(
