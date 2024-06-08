@@ -88,7 +88,8 @@ def callback():
                     messages=[TextMessage(text=event.message.text)]
                 )
             )
-
+            miranda_list_ingredient()
+            print('[Debug 104]')
     return 'OK'
 
 
@@ -101,3 +102,8 @@ if __name__ == "__main__":
     options = arg_parser.parse_args()
 
     app.run(debug=options.debug, port=options.port)
+
+
+def miranda_list_ingredient():
+    print('[Debug M000]')
+    
