@@ -106,4 +106,14 @@ if __name__ == "__main__":
 
 def miranda_list_ingredient():
     print('[Debug M000]')
+    # Load ingredient
+    with open('ingredient.yaml','r',encoding='utf-8') as f:
+        ingredient_dic = yaml.safe_load(f)
+        #print(ingredient_dic)
+    print(ingredient_dic)
+
+    #document = Document('D:\menu.docx')
+    #table = document.tables[0]
+
+    data = []
     
