@@ -95,8 +95,15 @@ def callback():
                     messages=[TextMessage(text=event.message.text)]
                 )
             )
-            miranda_list_ingredient()
             print('[Debug 104]')
+            line_bot_api.reply_message_with_http_info(
+                ReplyMessageRequest(
+                    reply_token=event.reply_token,
+                    messages=[TextMessage(text=miranda_list_ingredient())]
+                )
+            )
+            print('[Debug 105]')
+            
     return 'OK'
 
 
@@ -187,3 +194,11 @@ def miranda_list_ingredient():
     
     to_buy_per_day = tuple(to_buy_per_day)
     print(to_buy_per_day)
+    # output result
+    result = ''
+    for date_info in to_buy_per_day:
+        result += date_info['date']+'\n'
+        for ingredient,mount_info in date_info['ingredient'].items():
+            result += '\t'+ingredient+' '+str(mount_info['value'])+' '+mount_info['unit']+'\n'
+    print('[Debug]'+result)
+    return result
