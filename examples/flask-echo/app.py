@@ -92,13 +92,7 @@ def callback():
             line_bot_api.reply_message_with_http_info(
                 ReplyMessageRequest(
                     reply_token=event.reply_token,
-                    messages=[TextMessage(text=event.message.text)]
-                )
-            )
-            print('[Debug 104]')
-            line_bot_api.reply_message_with_http_info(
-                ReplyMessageRequest(
-                    reply_token=event.reply_token,
+                    #messages=[TextMessage(text=event.message.text)]
                     messages=[TextMessage(text=miranda_list_ingredient())]
                 )
             )
