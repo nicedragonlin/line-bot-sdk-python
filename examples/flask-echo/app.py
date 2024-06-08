@@ -71,6 +71,9 @@ def callback():
 
     # if event is MessageEvent and message is TextMessage, then echo text
     for event in events:
+        
+        
+        MessagingApi(ApiClient(configuration))
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text='[debug]'+event.message.text))
