@@ -1,0 +1,27 @@
+翡翠魚肉粥:
+    翡翠:
+        value: 2.0
+        unit: '盒'
+        people: 50
+    紅蘿蔔絲:
+        value: 3.0
+        unit: '斤'
+        people: 50
+高麗菜海鮮湯飯:
+    紅蘿蔔絲:
+        value: 1.0
+        unit: '斤'
+        people: 100
+    香菜:
+        value: 1.0
+        unit: '把'
+        people: 150
+    芹菜:
+        value: 1.0
+        unit: '少許'
+        people: 1000
+雞蛋麵線:
+    紅蘿蔔絲:
+        value: 1.0
+        unit: '斤'
+        people: 50
