@@ -127,6 +127,7 @@ def miranda_list_ingredient():
     print('[Debug M002]')
     keys = None
     for i, row in enumerate(table.rows):
+        print('[Debug M003]')
         text = (cell.text for cell in row.cells)
     
         # parsing keys
