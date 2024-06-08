@@ -95,7 +95,7 @@ def callback():
                 ReplyMessageRequest(
                     reply_token=event.reply_token,
                     #messages=[TextMessage(text=event.message.text)]
-                    messages=[TextMessage(text=miranda_list_ingredient())]
+                    messages=[TextMessage(text=miranda_list_ingredient(event.message.text))]
                 )
             )
             print('[Debug 105]')
@@ -114,7 +114,7 @@ if __name__ == "__main__":
     app.run(debug=options.debug, port=options.port)
 
 
-def miranda_list_ingredient():
+def miranda_list_ingredient(download_link):
     print('[Debug M000]')
     # Load ingredient
     with open('ingredient.yaml','r',encoding='utf-8') as f:
@@ -126,6 +126,7 @@ def miranda_list_ingredient():
     print('[Debug M002-1]')
 
     url = 'https://docs.google.com/document/d/15fLN8GigE071EFcm095LJH3WJXSjE7UE/edit?usp=sharing&ouid=105440516119125989146&rtpof=true&sd=true'
+    url = download_link
     file_id = url.split('/')[-2]
     prefix = 'https://drive.google.com/uc?/export=download&confirm=1&id='
     gdown.download(prefix+file_id,'menu_download.docx')
