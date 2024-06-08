@@ -4,3 +4,4 @@ python-docx
 pandas
 pyyaml
 requests
+gdown
