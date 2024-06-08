@@ -15,6 +15,10 @@
 
 import os
 import sys
+import yaml
+import math
+from docx.api import Document
+import pandas as pd
 from argparse import ArgumentParser
 
 from flask import Flask, request, abort
@@ -35,6 +39,9 @@ from linebot.v3.messaging import (
     ReplyMessageRequest,
     TextMessage
 )
+
+searve_people_num = 650
+
 
 app = Flask(__name__)
 
