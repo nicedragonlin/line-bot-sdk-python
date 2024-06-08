@@ -121,7 +121,11 @@ def miranda_list_ingredient():
     print(ingredient_dic)
     print('[Debug M001]')
 
-    document = Document('menu.docx')
+    print('[Debug M002-1]')
+    download_file_from_google_drive('15fLN8GigE071EFcm095LJH3WJXSjE7UE','menu_download.docx')
+    #document = Document('menu.docx')
+    print('[Debug M002-2]')
+    document = Document('menu_download.docx')
     table = document.tables[0]
 
     data = []
@@ -196,3 +200,17 @@ def miranda_list_ingredient():
             result += '\t'+ingredient+' '+str(mount_info['value'])+' '+mount_info['unit']+'\n'
     print('[Debug]'+result)
     return result
+
+def download_file_from_google_drive(file_id, destination):
+    URL = "https://docs.google.com/uc?export=download&confirm=1"
+
+    session = requests.Session()
+
+    response = session.get(URL, params={"id": file_id}, stream=True)
+    token = get_confirm_token(response)
+
+    if token:
+        params = {"id": file_id, "confirm": token}
+        response = session.get(URL, params=params, stream=True)
+
+    save_response_content(response, destination)
