@@ -128,7 +128,7 @@ def miranda_list_ingredient():
     url = 'https://docs.google.com/document/d/15fLN8GigE071EFcm095LJH3WJXSjE7UE/edit?usp=sharing&ouid=105440516119125989146&rtpof=true&sd=true'
     file_id = url.split('/')[-2]
     prefix = 'https://drive.google.com/uc?/export=download&confirm=1&id='
-    gdown.download(prefix+file_id,'D:\menu_download.docx')
+    gdown.download(prefix+file_id,'menu_download.docx')
     
     #document = Document('menu.docx')
     print('[Debug M002-2]')
