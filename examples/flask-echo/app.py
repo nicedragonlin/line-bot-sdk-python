@@ -217,4 +217,5 @@ def miranda_list_ingredient(download_link):
             else:
                 result += '\t'+ingredient+' '+str(mount_info['value'])+mount_info['unit']+'\n'
     print(result)
+    return result
 
