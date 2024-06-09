@@ -2,26 +2,59 @@
     翡翠:
         value: 2.0
         unit: '盒'
-        people: 50
+        people: 480
     紅蘿蔔絲:
         value: 3.0
         unit: '斤'
-        people: 50
+        people: 480
 高麗菜海鮮湯飯:
     紅蘿蔔絲:
         value: 1.0
         unit: '斤'
-        people: 100
+        people: 480
     香菜:
         value: 1.0
         unit: '把'
-        people: 150
+        people: 480
     芹菜:
         value: 1.0
         unit: '少許'
-        people: 1000
+        people: 480
 雞蛋麵線:
     紅蘿蔔絲:
         value: 1.0
         unit: '斤'
-        people: 50
+        people: 480        
+鳳梨糖醋排骨:
+    鳳梨罐:
+        value: 2
+        unit: '罐'
+        people: 480
+    軟骨:
+        value: 3
+        unit: '斤'
+        people: 480
+雞肉玉米粥:
+    雞胸肉丁:
+        value: 3
+        unit: '斤'
+        people: 480
+蒜香空心菜:
+    空心菜:
+        value: 33
+        unit: '斤'
+        people: 480
+玉米排骨湯:
+    玉米塊:
+        value: 10
+        unit: '斤'
+        people: 480
+檸檬愛玉:
+    愛玉:
+        value: 6
+        unit: '桶'
+        people: 480
+    檸檬汁:
+        value: 1
+        unit: '1瓶'
+        people: 700
