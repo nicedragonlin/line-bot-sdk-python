@@ -200,13 +200,15 @@ def miranda_list_ingredient(download_link):
     
     to_buy_per_day = tuple(to_buy_per_day)
     print(to_buy_per_day)
+
     # output result
     result = ''
     for date_info in to_buy_per_day:
         result += date_info['date']+'\n'
         for ingredient,mount_info in date_info['ingredient'].items():
-            result += '\t'+ingredient+' '+str(mount_info['value'])+' '+mount_info['unit']+'\n'
-    print('[Debug]'+result)
-    return result
-
+            if '少許' in mount_info['unit'] or '適量' in mount_info['unit']:
+                result += '\t' + ingredient + ' ' + mount_info['unit'] + '\n'
+            else:
+                result += '\t'+ingredient+' '+str(mount_info['value'])+mount_info['unit']+'\n'
+    print(result)
 
