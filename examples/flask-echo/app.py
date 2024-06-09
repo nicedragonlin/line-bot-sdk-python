@@ -167,9 +167,15 @@ def miranda_list_ingredient(download_link):
         # Construct a dictionary for this row, mapping
         # keys to values for this row
         row_data = dict(zip(keys, text))
-        row_data = { 'date': row_data['date'], 'dish': row_data['breakfast']+'、'+row_data['dish']+'、'+row_data['dessert']}
-    
-        data.append(row_data)
+        if '月' not in row_data['date']:
+            print('[WARN] Found a date not including "月": '+row_data['date'])
+            continue
+        # breakfast ingredient is buy in one day before. Every Monday breakfast is 家樂氏玉米片/牛奶 and it doens't need to process
+        row_data_date = { 'date': row_data['date'], 'dish': row_data['dish']+'、'+row_data['dessert']}
+        data.append(row_data_date)
+        if '家樂氏玉米片' not in row_data['breakfast']: #not Monday's breakfast
+            data[len(data)-2]['dish'] += '、'+row_data['breakfast']
+
     
     print(data)
     
