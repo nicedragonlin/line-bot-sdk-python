@@ -56,5 +56,144 @@
         people: 480
     檸檬汁:
         value: 1
-        unit: '1瓶'
+        unit: '瓶'
         people: 700
+紅蘿蔔馬鈴薯雞肉燴飯:
+    紅蘿蔔丁:
+        value: 5
+        unit: '斤'
+        people: 480
+    馬鈴薯丁:
+        value: 15
+        unit: '斤'
+        people: 480
+    雞胸肉丁:
+        value: 25
+        unit: '斤'
+        people: 480
+    洋蔥塊:
+        value: 5
+        unit: '斤'
+        people: 480
+    鮮香菇:
+        value: 3
+        unit: '斤'
+        people: 480
+    蒜:
+        value: 1.0
+        unit: '少許'
+        people: 480
+    蔥:
+        value: 1.0
+        unit: '少許'
+        people: 480
+時令蔬菜:
+    時令蔬菜:
+        value: 1
+        unit: '適量'
+        people: 480
+高麗菜肉絲蛋炒飯:
+    高麗菜:
+        value: 12
+        unit: '斤'
+        people: 480
+    肉絲:
+        value: 16
+        unit: '斤'
+        people: 480
+    紅蘿蔔絲:
+        value: 5
+        unit: '斤'
+        people: 480
+    油菜:
+        value: 3
+        unit: '斤'
+        people: 480
+香菇蒜頭雞湯:
+    乾香菇:
+        value: 1
+        unit: '斤'
+        people: 480
+    蒜:
+        value: 1.0
+        unit: '少許'
+        people: 480
+    蔥:
+        value: 1.0
+        unit: '少許'
+        people: 480
+雞蛋粥:
+    雞肉塊:
+        value: 10
+        unit: '斤'
+        people: 480
+紅蘿蔔洋蔥燉雞肉:
+    紅蘿蔔丁:
+        value: 5
+        unit: '斤'
+        people: 480
+    洋蔥塊:
+        value: 10
+        unit: '斤'
+        people: 480
+    雞肉塊:
+        value: 35
+        unit: '斤'
+        people: 480
+芋頭西米:
+    芋頭丁:
+        value: 15
+        unit: '斤'
+        people: 480
+肉燥粉絲湯:
+    絞肉:
+        value: 3
+        unit: '斤'
+        people: 480
+    韭菜:
+        value: 0.5
+        unit: '斤'
+        people: 480
+    豆芽菜:
+        value: 3
+        unit: '斤'
+        people: 480
+肉燥飯:
+    肉絲:
+        value: 12
+        unit: '斤'
+        people: 480
+湯青菜:
+    時令蔬菜:
+        value: 1
+        unit: '適量'
+        people: 480
+鰹魚味噌豆腐湯:
+    豆腐:
+        value: 10
+        unit: '盒'
+        people: 480
+鳳梨銀耳:
+    鳳梨丁罐:
+        value: 4
+        unit: '罐'
+        people: 480
+    木耳:
+        value: 3
+        unit: '斤'
+        people: 480
+    紅蘿蔔絲:
+        value: 2
+        unit: '斤'
+        people: 480
+餛飩湯:
+    餛飩:
+        value: 1000
+        unit: '顆'
+        people: 480
+    小白菜:
+        value: 3
+        unit: '斤'
+        people: 480
+
+
