@@ -42,7 +42,7 @@ from linebot.v3.messaging import (
     TextMessage
 )
 
-searve_people_num = 650
+searve_people_num = 480
 
 
 app = Flask(__name__)
