@@ -1,12 +1,3 @@
-翡翠魚肉粥:
-    翡翠:
-        value: 2.0
-        unit: '盒'
-        people: 480
-    紅蘿蔔絲:
-        value: 3.0
-        unit: '斤'
-        people: 480
 高麗菜海鮮湯飯:
     紅蘿蔔絲:
         value: 1.0
@@ -34,10 +25,14 @@
         value: 3
         unit: '斤'
         people: 480
-雞肉玉米粥:
+玉米雞肉粥:
     雞胸肉丁:
         value: 3
         unit: '斤'
+        people: 480
+    玉米粒:
+        value: 2
+        unit: '包'
         people: 480
 蒜香空心菜:
     空心菜:
@@ -45,6 +40,10 @@
         unit: '斤'
         people: 480
 玉米排骨湯:
+    軟骨:
+        value: 3
+        unit: '斤'
+        people: 480
     玉米塊:
         value: 10
         unit: '斤'
@@ -87,6 +86,10 @@
         value: 1.0
         unit: '少許'
         people: 480
+    青江菜:
+        value: 5
+        unit: '斤'
+        people: 480
 時令蔬菜:
     時令蔬菜:
         value: 1
@@ -109,9 +112,12 @@
         value: 3
         unit: '斤'
         people: 480
-香菇蒜頭雞湯:
     乾香菇:
         value: 1
+        unit: '斤'
+        people: 480
+    雞肉塊:
+        value: 10
         unit: '斤'
         people: 480
     蒜:
@@ -122,10 +128,14 @@
         value: 1.0
         unit: '少許'
         people: 480
-雞蛋粥:
-    雞肉塊:
-        value: 10
-        unit: '斤'
+香菇蒜頭雞湯:
+    蒜:
+        value: 1.0
+        unit: '少許'
+        people: 480
+    蔥:
+        value: 1.0
+        unit: '少許'
         people: 480
 紅蘿蔔洋蔥燉雞肉:
     紅蘿蔔丁:
@@ -195,5 +205,469 @@
         value: 3
         unit: '斤'
         people: 480
+高麗菜香菇肉羹麵:
+    高麗菜:
+        value: 18
+        unit: '斤'
+        people: 480
+    木耳絲:
+        value: 3
+        unit: '斤'
+        people: 480
+    紅蘿蔔絲:
+        value: 2
+        unit: '斤'
+        people: 480
+    肉絲:
+        value: 6
+        unit: '斤'
+        people: 480
+    肉羹:
+        value: 2
+        unit: '包'
+        people: 480
+    金針菇:
+        value: 5
+        unit: '斤'
+        people: 480
+    秀珍菇:
+        value: 3
+        unit: '斤'
+        people: 480
+    香菜:
+        value: 1
+        unit: '把'
+        people: 480
+    筍絲:
+        value: 3
+        unit: '斤'
+        people: 480
+芹菜貢丸湯:
+    小貢丸:
+        value: 2
+        unit: '包'
+        people: 480
+    芹菜:
+        value: 0.5
+        unit: '斤'
+        people: 480
+高麗菜粥:
+    高麗菜:
+        value: 1
+        unit: '粒'
+        people: 480
+蚵仔粥:
+    蚵仔:
+        value: 3
+        unit: '斤'
+        people: 480
+竹筍肉絲蛤蜊湯飯:
+    鮮竹筍絲:
+        value: 20
+        unit: '斤'
+        people: 480
+    肉絲:
+        value: 12
+        unit: '斤'
+        people: 480
+    蛤蜊:
+        value: 10
+        unit: '斤'
+        people: 480
+    芹菜:
+        value: 1
+        unit: '斤'
+        people: 480
+絲瓜麵線:
+    絲瓜:
+        value: 5
+        unit: '斤'
+        people: 480
+菠菜肉末粥:
+    菠菜:
+        value: 3
+        unit: '斤'
+        people: 480
+    絞肉:
+        value: 3
+        unit: '斤'
+        people: 480
+南瓜粥:
+    芹菜:
+        value: 1
+        unit: '斤'
+        people: 480
+    南瓜:
+        value: 10
+        unit: '斤'
+        people: 480
+翡翠魚肉粥:
+    翡翠:
+        value: 3
+        unit: '盒'
+        people: 480
+    魚肉:
+        value: 3
+        unit: '斤'
+        people: 480
+肉骨茶麵:
+    肉骨茶包:
+        value: 10
+        unit: '包'
+        people: 480
+    嫩肉片:
+        value: 18
+        unit: '斤'
+        people: 480
+    高麗菜:
+        value: 18
+        unit: '斤'
+        people: 480
+    鮮香菇:
+        value: 5
+        unit: '斤'
+        people: 480
+    紅蘿蔔丁:
+        value: 6
+        unit: '斤'
+        people: 480
+    白蘿蔔丁:
+        value: 10
+        unit: '斤'
+        people: 480
+    芹菜:
+        value: 1
+        unit: '斤'
+        people: 480
+    玉米塊:
+        value: 10
+        unit: '斤'
+        people: 480
+肉燥粉絲湯:
+    絞肉:
+        value: 3
+        unit: 斤
+        people: 480
+    韭菜:
+        value: 0.5
+        unit: '斤'
+        people: 480
+    豆芽菜:
+        value: 3
+        unit: '斤'
+        people: 480
+青木瓜排骨湯:
+    軟骨:
+        value: 3
+        unit: '斤'
+        people: 480
+    青木瓜:
+        value: 8
+        unit: '斤'
+        people: 480
+    芹菜:
+        value: 0.5
+        unit: '斤'
+        people: 480
+海帶結滷肉:
+    海帶結:
+        value: 10
+        unit: '斤'
+        people: 480
+    紅蘿蔔丁:
+        value: 5
+        unit: '斤'
+        people: 480
+    肉塊:
+        value: 25
+        unit: '斤'
+        people: 480
+海帶芽湯:
+    海帶芽:
+        value: 2
+        unit: '斤'
+        people: 480
+雞肉飯:
+    雞胸肉丁:
+        value: 25
+        unit: '斤'
+        people: 480
+    絞肉:
+        value: 6
+        unit: '斤'
+        people: 480
+油豆腐滷肉:  
+    小油豆腐:
+        value: 15
+        unit: '斤'
+        people: 480
+    肉塊:
+        value: 25
+        unit: '斤'
+        people: 480
+薑絲蚵仔湯:
+    蚵仔:
+        value: 7
+        unit: '斤'
+        people: 480
+蔬菜肉絲炒飯:
+    肉絲:
+        value: 16
+        unit: '斤'
+        people: 480
+    青江菜:
+        value: 10
+        unit: '斤'
+        people: 480
+    紅蘿蔔絲:
+        value: 3
+        unit: '斤'
+        people: 480
+山藥雞湯: 
+    山藥:
+        value: 8
+        unit: '斤'
+        people: 480
+    雞肉:
+        value: 8
+        unit: '斤'
+        people: 480
+    蔥:
+        value: 1.0
+        unit: '少許'
+        people: 480
+    蒜:
+        value: 1.0
+        unit: '少許'
+        people: 480
+    薑:
+        value: 1.0
+        unit: '少許'
+        people: 480
+紅蘿蔔香菇滷肉:
+    紅蘿蔔丁:
+        value: 10
+        unit: '斤'
+        people: 480
+    肉塊:
+        value: 25
+        unit: '斤'
+        people: 480
+    乾香菇絲:
+        value: 1
+        unit: '斤'
+        people: 480
+當歸雞湯:
+    當歸包:
+        value: 5
+        unit: '包'
+        people: 480
+    雞肉塊:
+        value: 10
+        unit: '斤'
+        people: 480
+三杯雞:
+    雞肉塊:
+        value: 38
+        unit: '斤'
+        people: 480
+    九層塔:
+        value: 1
+        unit: '斤'
+        people: 480
+蕃茄肉片豆腐湯:
+    海帶芽:
+        value: 2
+        unit: '斤'
+        people: 480
+    豆腐:
+        value: 10
+        unit: '盒'
+        people: 480
+香菇肉燥:
+    絞肉:
+        value: 25
+        unit: '斤'
+        people: 480
+蘿蔔排骨湯: 
+    軟骨:
+        value: 3
+        unit: '斤'
+        people: 480
+    蘿蔔丁:
+        value: 10
+        unit: '斤'
+        people: 480
+紅蘿蔔洋蔥燉雞肉:
+    紅蘿蔔丁:
+        value: 5
+        unit: '斤'
+        people: 480
+    洋蔥塊:
+        value: 10
+        unit: '斤斤'
+        people: 480
+    雞肉塊:
+        value: 35
+        unit: '斤'
+        people: 480
 
+馬鈴薯燉肉:
+    肉塊:
+        value: 25
+        unit: '斤'
+        people: 480
+    馬鈴薯丁:
+        value: 15
+        unit: '斤'
+        people: 480
+    紅蘿蔔丁:
+        value: 3
+        unit: '斤'
+        people: 480
 
+芹菜魚丸湯:
+    芹菜:
+        value: 0.5
+        unit: '斤'
+        people: 480
+    小魚丸:
+        value: 2
+        unit: '包'
+        people: 480
+
+    蔥:
+        value: 1.0
+        unit: '少許'
+        people: 480
+    蒜:
+        value: 1.0
+        unit: '少許'
+        people: 480
+    薑:
+        value: 1.0
+        unit: '少許'
+        people: 480
+仙草蜜:
+    仙草:
+        value: 6
+        unit: '桶'
+        people: 480
+紅燒雞肉丁:
+    雞胸肉丁:
+        value: 36
+        unit: '斤'
+        people: 480
+    紅蘿蔔丁:
+        value: 5
+        unit: '斤'
+        people: 480
+    洋蔥塊:
+        value: 5
+        unit: '斤'
+        people: 480
+冬瓜排骨湯:
+    軟骨:
+        value: 3
+        unit: '斤'
+        people: 480
+    冬瓜:
+        value: 15
+        unit: '斤'
+        people: 480
+水餃:
+    水餃:
+        value: 14
+        unit: '包'
+        people: 480
+小白菜蛋花湯: 
+    小白菜:
+        value: 2
+        unit: '斤'
+        people: 480
+菠蘿麵包:
+    菠蘿麵包:
+        value: 630
+        unit: '個'
+        people: 480
+鵪鶉蛋滷肉燥:
+    鵪鶉蛋:
+        value: 600
+        unit: '顆'
+        people: 480
+    絞肉:
+        value: 25
+        unit: '斤'
+        people: 480
+香菇雞湯: 
+    雞肉塊:
+        value: 10
+        unit: '斤'
+        people: 480
+    乾香菇:
+        value: 1
+        unit: '斤'
+        people: 480
+瓜子肉:
+    絞肉:
+        value: 25
+        unit: '斤'
+        people: 480
+番茄高麗菜:
+    番茄:
+        value: 10
+        unit: '斤'
+        people: 480
+    高麗菜:
+        value: 40
+        unit: '斤'
+        people: 480
+蒜頭雞湯:  
+    雞肉塊:
+        value: 10
+        unit: '斤'
+        people: 480
+地瓜麥片:
+    地瓜丁:
+        value: 10
+        unit: '斤'
+        people: 480
+蔥爆肉絲:
+    蒜:
+        value: 2
+        unit: '包'
+        people: 480
+    肉絲:
+        value: 28
+        unit: '斤'
+        people: 480
+    蔥:
+        value: 1
+        unit: '斤'
+        people: 480
+彩椒雞丁油豆腐:
+    雞胸肉丁:
+        value: 25
+        unit: '斤'
+        people: 480
+    青椒:
+        value: 3
+        unit: '粒'
+        people: 480
+    彩椒各:
+        value: 3
+        unit: '粒'
+        people: 480
+    小油豆腐:
+        value: 10
+        unit: '斤'
+        people: 480
+味增魚湯:
+    魚肉:
+        value: 8
+        unit: '斤'
+        people: 480
+    味增:
+        value: 1
+        unit: '箱'
+        people: 480
