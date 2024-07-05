@@ -22,6 +22,7 @@ import pandas as pd
 from argparse import ArgumentParser
 import requests
 import gdown
+import re
 
 from flask import Flask, request, abort
 from linebot import (
@@ -140,36 +141,30 @@ def miranda_list_ingredient(download_link):
     print('[Debug M002]')
     keys = None
     for i, row in enumerate(table.rows):
-        print('[Debug M003]')
-        text = (cell.text for cell in row.cells)
-    
-        # parsing keys
-        if i == 0:
-            keys = list(text)
-            # Adjust kesy to easy-coding tag
-            for i in range(len(keys)):
-                if keys[i] == "日期/星期":
-                    keys[i] = "date"
-                if keys[i] == "早上點心":
-                    keys[i] = "breakfast"
-                if "每日均含" in keys[i]:
-                    keys[i] = "dish"
-                if keys[i] == "下午點心":
-                    keys[i] = "dessert"
-            # tuple is more efficient for look-up
-            kyes = tuple(keys)
-            print(keys)
-            continue
-    
-        # Establish the mapping based on the first row
-        # headers; these will become the keys of our dictionary
-    
+        text = [cell.text for cell in row.cells]
+
+        # Remove duplicate cell (somehow it happends eventhough it seems normal in doc)
+        duplicate_list = []
+        for i in range(len(text)-1):
+            if i==0:
+                continue
+            elif text[i-1]==text[i]:
+                duplicate_list.append(i)
+        for i in range(len(duplicate_list)-1,-1,-1):
+            del text[duplicate_list[i]]
+
         # Construct a dictionary for this row, mapping
         # keys to values for this row
         row_data = dict(zip(keys, text))
+        print('[DEBUG row_data]')
+        print(row_data)
         if '月' not in row_data['date']:
             print('[WARN] Found a date not including "月": '+row_data['date'])
             continue
+        if len(row_data) !=4:
+            print('[WARN] Found a row with non-4-len tuple')
+            continue
+
         # breakfast ingredient is buy in one day before. Every Monday breakfast is 家樂氏玉米片/牛奶 and it doens't need to process
         row_data_date = { 'date': row_data['date'], 'dish': row_data['dish']+'、'+row_data['dessert']}
         data.append(row_data_date)
@@ -184,13 +179,14 @@ def miranda_list_ingredient(download_link):
         if date_data['date']=='':
             continue
         date_dish_ingredient = dict()
-        for search_dish in ingredient_dic.keys():
-            if search_dish in date_data['dish']:
-                print('Found dish: '+search_dish)
-                print('Date: '+date_data['date'])
+    
+        for search_dish in dish_list:
+            search_dish = search_dish.strip()
+            if search_dish in ingredient_dic.keys():
+                print('\t'+'Found dish: '+search_dish)
                 for ingredient,mount_info in ingredient_dic[search_dish].items():
                     num_unit = searve_people_num/mount_info['people']
-                    print(ingredient+' Num_unit: ' + str(num_unit))
+                    print('\t\t'+ingredient+' Num_unit: ' + str(num_unit))
                     if ingredient in date_dish_ingredient.keys()  : # exist ingredient
                         date_dish_ingredient[ingredient]['value'] += mount_info['value']*num_unit
                     else:
@@ -218,4 +214,3 @@ def miranda_list_ingredient(download_link):
                 result += '\t'+ingredient+' '+str(mount_info['value'])+mount_info['unit']+'\n'
     print(result)
     return result
-
