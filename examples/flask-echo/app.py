@@ -135,7 +135,6 @@ def miranda_list_ingredient(download_link):
     #document = Document('menu.docx')
     print('[Debug M002-2]')
     document = Document('menu_download.docx')
-    table = document.tables[0]
 
     data = []
     keys = ('date','breakfast', 'dish', 'dessert' )
