@@ -178,6 +178,8 @@ def miranda_list_ingredient(download_link):
     for date_data in data:
         if date_data['date']=='':
             continue
+        print('Date: ' + date_data['date'])
+        dish_list = re.split('、|/', date_data['dish'])
         date_dish_ingredient = dict()
     
         for search_dish in dish_list:
