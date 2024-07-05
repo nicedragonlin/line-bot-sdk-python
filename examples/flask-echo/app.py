@@ -143,7 +143,8 @@ def miranda_list_ingredient(download_link):
     for table in document.tables : 
         for i, row in enumerate(table.rows):
             text = [cell.text for cell in row.cells]
-    
+            print('[Debug M003]')
+            print(text)
             # Remove duplicate cell (somehow it happends eventhough it seems normal in doc)
             duplicate_list = []
             for i in range(len(text)-1):
@@ -153,7 +154,8 @@ def miranda_list_ingredient(download_link):
                     duplicate_list.append(i)
             for i in range(len(duplicate_list)-1,-1,-1):
                 del text[duplicate_list[i]]
-    
+            print('[Debug M004]')
+            print(text)
             # Construct a dictionary for this row, mapping
             # keys to values for this row
             row_data = dict(zip(keys, text))
