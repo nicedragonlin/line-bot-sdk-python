@@ -231,8 +231,7 @@ def miranda_list_ingredient(download_link):
         result += '\n'
         result += '\t沒找到: '
         for dish in date_info['not_found_dish']:
-            result += dish + ' '            result += '\t'+ingredient+' '+str(mount_info['value'])+mount_info['unit']+'\n'
-
+            result += dish + ' ' 
     
     print(result)
     return result
