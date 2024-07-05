@@ -5,4 +5,4 @@ pandas
 pyyaml
 requests
 gdown
-re
+regex
