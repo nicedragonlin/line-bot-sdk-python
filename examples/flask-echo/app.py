@@ -221,6 +221,7 @@ def miranda_list_ingredient(download_link):
             if '少許' in mount_info['unit'] or '適量' in mount_info['unit']:
                 result += '\t' + ingredient + ' ' + mount_info['unit'] + '\n'
             else:
+                result += '\t'+ingredient+' '+str(mount_info['value'])+mount_info['unit']+'\n'
     result += '-----------\n'
     for date_info in to_buy_per_day:
         result += '\n'+date_info['date'] + '\n'
