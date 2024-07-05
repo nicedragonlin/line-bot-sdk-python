@@ -184,11 +184,14 @@ def miranda_list_ingredient(download_link):
         print('Date: ' + date_data['date'])
         dish_list = re.split('、|/', date_data['dish'])
         date_dish_ingredient = dict()
-    
+        found_dish_list = []
+        not_found_dish_list = []
+        
         for search_dish in dish_list:
             search_dish = search_dish.strip()
             if search_dish in ingredient_dic.keys():
                 print('\t'+'Found dish: '+search_dish)
+                found_dish_list.append(search_dish)
                 for ingredient,mount_info in ingredient_dic[search_dish].items():
                     num_unit = searve_people_num/mount_info['people']
                     print('\t\t'+ingredient+' Num_unit: ' + str(num_unit))
@@ -196,13 +199,15 @@ def miranda_list_ingredient(download_link):
                         date_dish_ingredient[ingredient]['value'] += mount_info['value']*num_unit
                     else:
                         date_dish_ingredient[ingredient] = {'value': mount_info['value']*num_unit, 'unit': mount_info['unit']}
+            else:
+                not_found_dish_list.append(search_dish)
         # round up for each ingredient
         for  ingredient in date_dish_ingredient.keys():
             if date_dish_ingredient[ingredient]['unit'] == '斤':
                 date_dish_ingredient[ingredient]['value'] = math.ceil(date_dish_ingredient[ingredient]['value']*2.0)/2
             else:
                 date_dish_ingredient[ingredient]['value'] = math.ceil(date_dish_ingredient[ingredient]['value'])
-        date_dish_dict = {'date': date_data['date'], 'ingredient': date_dish_ingredient}
+        date_dish_dict = {'date': date_data['date'], 'ingredient': date_dish_ingredient, 'found_dish': found_dish_list, 'not_found_dish': not_found_dish_list}
         to_buy_per_day.append(date_dish_dict)
     
     to_buy_per_day = tuple(to_buy_per_day)
@@ -216,6 +221,17 @@ def miranda_list_ingredient(download_link):
             if '少許' in mount_info['unit'] or '適量' in mount_info['unit']:
                 result += '\t' + ingredient + ' ' + mount_info['unit'] + '\n'
             else:
-                result += '\t'+ingredient+' '+str(mount_info['value'])+mount_info['unit']+'\n'
+    result += '-----------\n'
+    for date_info in to_buy_per_day:
+        result += '\n'+date_info['date'] + '\n'
+        result += '\t找到: '
+        for dish in date_info['found_dish']:
+            result += dish+' '
+        result += '\n'
+        result += '\t沒找到: '
+        for dish in date_info['not_found_dish']:
+            result += dish + ' '            result += '\t'+ingredient+' '+str(mount_info['value'])+mount_info['unit']+'\n'
+
+    
     print(result)
     return result
