@@ -138,38 +138,40 @@ def miranda_list_ingredient(download_link):
     table = document.tables[0]
 
     data = []
+    keys = ('date','breakfast', 'dish', 'dessert' )
     print('[Debug M002]')
-    keys = None
-    for i, row in enumerate(table.rows):
-        text = [cell.text for cell in row.cells]
-
-        # Remove duplicate cell (somehow it happends eventhough it seems normal in doc)
-        duplicate_list = []
-        for i in range(len(text)-1):
-            if i==0:
+    
+    for table in document.tables : 
+        for i, row in enumerate(table.rows):
+            text = [cell.text for cell in row.cells]
+    
+            # Remove duplicate cell (somehow it happends eventhough it seems normal in doc)
+            duplicate_list = []
+            for i in range(len(text)-1):
+                if i==0:
+                    continue
+                elif text[i-1]==text[i]:
+                    duplicate_list.append(i)
+            for i in range(len(duplicate_list)-1,-1,-1):
+                del text[duplicate_list[i]]
+    
+            # Construct a dictionary for this row, mapping
+            # keys to values for this row
+            row_data = dict(zip(keys, text))
+            print('[DEBUG row_data]')
+            print(row_data)
+            if '月' not in row_data['date']:
+                print('[WARN] Found a date not including "月": '+row_data['date'])
                 continue
-            elif text[i-1]==text[i]:
-                duplicate_list.append(i)
-        for i in range(len(duplicate_list)-1,-1,-1):
-            del text[duplicate_list[i]]
+            if len(row_data) !=4:
+                print('[WARN] Found a row with non-4-len tuple')
+                continue
 
-        # Construct a dictionary for this row, mapping
-        # keys to values for this row
-        row_data = dict(zip(keys, text))
-        print('[DEBUG row_data]')
-        print(row_data)
-        if '月' not in row_data['date']:
-            print('[WARN] Found a date not including "月": '+row_data['date'])
-            continue
-        if len(row_data) !=4:
-            print('[WARN] Found a row with non-4-len tuple')
-            continue
-
-        # breakfast ingredient is buy in one day before. Every Monday breakfast is 家樂氏玉米片/牛奶 and it doens't need to process
-        row_data_date = { 'date': row_data['date'], 'dish': row_data['dish']+'、'+row_data['dessert']}
-        data.append(row_data_date)
-        if '家樂氏玉米片' not in row_data['breakfast']: #not Monday's breakfast
-            data[len(data)-2]['dish'] += '、'+row_data['breakfast']
+            # breakfast ingredient is buy in one day before. Every Monday breakfast is 家樂氏玉米片/牛奶 and it doens't need to process
+            row_data_date = { 'date': row_data['date'], 'dish': row_data['dish']+'、'+row_data['dessert']}
+            data.append(row_data_date)
+            if '家樂氏玉米片' not in row_data['breakfast']: #not Monday's breakfast
+                data[len(data)-2]['dish'] += '、'+row_data['breakfast']
 
     
     print(data)
