@@ -43,7 +43,7 @@ from linebot.v3.messaging import (
     TextMessage
 )
 
-searve_people_num = 600
+
 
 
 app = Flask(__name__)
@@ -116,6 +116,7 @@ if __name__ == "__main__":
 
 
 def miranda_list_ingredient(download_link):
+    searve_people_num = 600
     print('[Debug M000]')
     # Load ingredient
     with open('ingredient.yaml','r',encoding='utf-8') as f:
@@ -134,7 +135,8 @@ def miranda_list_ingredient(download_link):
     file_id = url.split('/')[-2]
     prefix = 'https://drive.google.com/uc?/export=download&confirm=1&id='
     print('[Debug M001-2]'+file_id)
-    print('[Debug M001-3]'+searve_people_num)
+    print('[Debug M001-3]')
+    print(searve_people_num)
     gdown.download(prefix+file_id,'menu_download.docx')
     
     #document = Document('menu.docx')
