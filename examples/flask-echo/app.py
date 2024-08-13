@@ -133,6 +133,8 @@ def miranda_list_ingredient(download_link):
         searve_people_num = float(in_arg[1])
     file_id = url.split('/')[-2]
     prefix = 'https://drive.google.com/uc?/export=download&confirm=1&id='
+    print('[Debug M001-2]'+file_id)
+    print('[Debug M001-3]'+searve_people_num)
     gdown.download(prefix+file_id,'menu_download.docx')
     
     #document = Document('menu.docx')
