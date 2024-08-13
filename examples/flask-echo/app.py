@@ -130,7 +130,7 @@ def miranda_list_ingredient(download_link):
     in_arg = download_link.split(' ')
     url = in_arg[0]
     if len(in_arg) > 1:
-        searve_people_num = in_arg[1]
+        searve_people_num = float(in_arg[1])
     file_id = url.split('/')[-2]
     prefix = 'https://drive.google.com/uc?/export=download&confirm=1&id='
     gdown.download(prefix+file_id,'menu_download.docx')
