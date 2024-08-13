@@ -127,7 +127,10 @@ def miranda_list_ingredient(download_link):
     print('[Debug M002-1]')
 
     url = 'https://docs.google.com/document/d/15fLN8GigE071EFcm095LJH3WJXSjE7UE/edit?usp=sharing&ouid=105440516119125989146&rtpof=true&sd=true'
-    url = download_link
+    in_arg = download_link.split(' ')
+    url = in_arg[0]
+    if len(in_arg) > 1:
+        searve_people_num = in_arg[1]
     file_id = url.split('/')[-2]
     prefix = 'https://drive.google.com/uc?/export=download&confirm=1&id='
     gdown.download(prefix+file_id,'menu_download.docx')
